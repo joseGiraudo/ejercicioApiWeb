@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D61B2D9D-9074-4CFC-8384-09E604B670F7}|WebApi\\WebApi.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\webapi\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D61B2D9D-9074-4CFC-8384-09E604B670F7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\daos\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\daos\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\daos\\usuariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\daos\\usuariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\daos\\iuserdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\daos\\iuserdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D61B2D9D-9074-4CFC-8384-09E604B670F7}|WebApi\\WebApi.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D61B2D9D-9074-4CFC-8384-09E604B670F7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D61B2D9D-9074-4CFC-8384-09E604B670F7}|WebApi\\WebApi.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D61B2D9D-9074-4CFC-8384-09E604B670F7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D61B2D9D-9074-4CFC-8384-09E604B670F7}|WebApi\\WebApi.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D61B2D9D-9074-4CFC-8384-09E604B670F7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\response\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\response\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,20 +74,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\WebApi\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "WebApi\\Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\WebApi\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "WebApi\\Controllers\\UsuarioController.cs",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\WebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\WebApi\\appsettings.json",
+              "RelativeToolTip": "WebApi\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-28T17:12:08.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\WebApi\\Program.cs",
+              "RelativeToolTip": "WebApi\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T16:53:27.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUserDAO.cs",
+              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\DAOs\\IUserDAO.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\DAOs\\IUserDAO.cs",
+              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\DAOs\\IUserDAO.cs",
+              "RelativeToolTip": "ClassLibrary\\DAOs\\IUserDAO.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAgwBkAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T15:42:00.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\WebApi\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\WebApi\\Controllers\\UserController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAmwF0AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T21:09:32.885Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "ApiResponse.cs",
               "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\Response\\ApiResponse.cs",
               "RelativeDocumentMoniker": "ClassLibrary\\Response\\ApiResponse.cs",
@@ -88,26 +139,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\models\\Usuario.cs",
-              "RelativeDocumentMoniker": "ClassLibrary\\models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\models\\Usuario.cs",
-              "RelativeToolTip": "ClassLibrary\\models\\Usuario.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBoAAAAWAAAA",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\models\\User.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\models\\User.cs",
+              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\models\\User.cs",
+              "RelativeToolTip": "ClassLibrary\\models\\User.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwA0AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T20:39:03.125Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UsuarioDAO.cs",
-              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\DAOs\\UsuarioDAO.cs",
-              "RelativeDocumentMoniker": "ClassLibrary\\DAOs\\UsuarioDAO.cs",
-              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\DAOs\\UsuarioDAO.cs",
-              "RelativeToolTip": "ClassLibrary\\DAOs\\UsuarioDAO.cs",
-              "ViewState": "AQIAAHAAAAAAAAAAAAAUwH0AAAAJAAAA",
+              "DocumentIndex": 0,
+              "Title": "UserDAO.cs",
+              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\DAOs\\UserDAO.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\DAOs\\UserDAO.cs",
+              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\DAOs\\UserDAO.cs",
+              "RelativeToolTip": "ClassLibrary\\DAOs\\UserDAO.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAmwDQAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T19:55:14.586Z",
               "EditorCaption": ""

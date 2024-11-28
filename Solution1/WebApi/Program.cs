@@ -1,3 +1,5 @@
+using ClassLibrary.DAOs;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +8,25 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
+// agrego la dependencia del DAO a la app
+builder.Services.AddSingleton<IUserDAO>(UserDAO.Instance);
+
+// builder.Services.AddSingleton<IUserDAO, UserDAO>();
+
+
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.AllowAnyHeader()
+            .AllowAnyOrigin()
+            .AllowAnyMethod();
+    });
+});
+
+
 
 var app = builder.Build();
 

@@ -1,7 +1,14 @@
 ﻿using ClassLibrary.DAOs;
 using ClassLibrary.DTOs;
 using ClassLibrary.models;
+using Configuracion;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace WebApi.Controllers
 {
@@ -11,9 +18,12 @@ namespace WebApi.Controllers
     {
         private readonly IUserDAO _userDAO;
 
-        public UserController(IUserDAO userDAO)
+        private JwtConfiguration _jwtConfiguration;
+
+        public UserController(IUserDAO userDAO, IOptions<JwtConfiguration> jwtConfiguration)
         {
             _userDAO = userDAO;
+            _jwtConfiguration = jwtConfiguration.Value;
         }
 
         [HttpGet]
@@ -31,6 +41,7 @@ namespace WebApi.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize(Roles = "Admin")]
         public IActionResult GetById(int id)
         {
             try
@@ -73,6 +84,7 @@ namespace WebApi.Controllers
         }
 
         [HttpDelete]
+        [Authorize(Roles = "Admin")]
         public IActionResult DeleteById(int id)
         {
             try
@@ -92,12 +104,43 @@ namespace WebApi.Controllers
             try
             {
                 var user = _userDAO.Login(loginDTO);
-                return Ok(user);
+                
+                var token = GenerateToken(user);
+
+                return Ok(token);
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
+        }
+
+
+
+        private string GenerateToken(User user)
+        {
+            var claim = new[]
+            {
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Role, "Admin")
+            };
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtConfiguration.Key));
+
+            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var securityToken = new JwtSecurityToken
+                (
+                    _jwtConfiguration.Issuer,
+                    _jwtConfiguration.Audience,
+                    claims: claim,
+                    expires: DateTime.Now.AddMinutes(120),
+                    signingCredentials: credentials
+                );
+
+            var token = new JwtSecurityTokenHandler().WriteToken(securityToken);
+            return token;
         }
     }
 }

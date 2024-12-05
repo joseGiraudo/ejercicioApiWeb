@@ -38,3 +38,13 @@ C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercici
 C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\WebApi\bin\Debug\net8.0\ClassLibrary.dll
 C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\WebApi\bin\Debug\net8.0\ClassLibrary.pdb
 C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\WebApi\obj\Debug\net8.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\WebApi\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\WebApi\bin\Debug\net8.0\Configuracion.dll
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\WebApi\bin\Debug\net8.0\Configuracion.pdb

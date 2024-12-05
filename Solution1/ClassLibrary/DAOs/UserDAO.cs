@@ -1,10 +1,15 @@
 ﻿using ClassLibrary.DTOs;
 using ClassLibrary.models;
 using Dapper;
+using Microsoft.AspNetCore.DataProtection.KeyManagement;
+using Microsoft.IdentityModel.Tokens;
 using MySqlConnector;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Reflection;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -15,7 +20,6 @@ namespace ClassLibrary.DAOs
     public class UserDAO : IUserDAO
     {
         private static UserDAO _instance;
-
         private string connectionString = "Server=127.0.0.1;Port=3307;Database=apiExtradosDB;User Id=root;Password=root1234;";
 
         // constructor privado
@@ -169,5 +173,6 @@ namespace ClassLibrary.DAOs
             }
             return GetById(user.Id);
         }
+
     }
 }

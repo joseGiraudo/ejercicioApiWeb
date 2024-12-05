@@ -1,0 +1,12 @@
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\Configuracion\bin\Debug\net8.0\Configuracion.deps.json
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\Configuracion\bin\Debug\net8.0\Configuracion.dll
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\Configuracion\bin\Debug\net8.0\Configuracion.pdb
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\Configuracion\obj\Debug\net8.0\Configuracion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\Configuracion\obj\Debug\net8.0\Configuracion.AssemblyInfoInputs.cache
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\Configuracion\obj\Debug\net8.0\Configuracion.AssemblyInfo.cs
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\Configuracion\obj\Debug\net8.0\Configuracion.csproj.CoreCompileInputs.cache
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\Configuracion\obj\Debug\net8.0\Configuracion.sourcelink.json
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\Configuracion\obj\Debug\net8.0\Configuracion.dll
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\Configuracion\obj\Debug\net8.0\refint\Configuracion.dll
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\Configuracion\obj\Debug\net8.0\Configuracion.pdb
+C:\Users\joseg\OneDrive\Documentos\bootcamp extrados\segunda parte - BE\ejercicioApiWeb\Solution1\Configuracion\obj\Debug\net8.0\ref\Configuracion.dll

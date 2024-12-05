@@ -1,4 +1,8 @@
 using ClassLibrary.DAOs;
+using Configuracion;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,8 +16,9 @@ builder.Services.AddSwaggerGen();
 
 // agrego la dependencia del DAO a la app
 builder.Services.AddSingleton<IUserDAO>(UserDAO.Instance);
+// builder.Services.AddScoped<IUserDAO, UserDAO>();
 
-// builder.Services.AddSingleton<IUserDAO, UserDAO>();
+builder.Services.Configure<JwtConfiguration>(builder.Configuration.GetSection("Jwt"));
 
 
 builder.Services.AddCors(options =>
@@ -25,6 +30,21 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod();
     });
 });
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+        };
+    });
 
 
 
@@ -38,6 +58,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Agrego la auth para el Jwt
+app.UseAuthentication();
 
 app.UseAuthorization();
 

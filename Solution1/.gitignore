@@ -1,0 +1,87 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Archivos de usuario en Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Binarios y archivos generados
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+*.pdb
+*.cache
+*.ilk
+*.tmp
+*.log
+*.vsix
+*.dll
+*.exe
+*.plist
+
+# Archivos del sistema de paquetes
+*.nupkg
+packages/
+.nuget/
+*.snupkg
+
+# Archivos de publicación y despliegue
+*.publishsettings
+*.pubxml
+*.pubxml.user
+
+# Archivos de configuración local
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.json.user
+
+# Archivos temporales
+*.tmp
+*.temp
+*.pidb
+*.idb
+*.pidb.meta
+_ReSharper.Caches/
+
+# Archivos generados automáticamente por el compilador
+*.generated.cs
+*.g.cs
+*.designer.cs
+*.swagger
+
+# Configuración de Rider/JetBrains
+.idea/
+*.iml
+
+# Archivos de integración con dependencias
+*.lock.json
+*.lock
+
+# Archivos innecesarios para .NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Base de datos local
+*.mdf
+*.ldf
+*.sqlite
+*.db
+
+# Archivos de Docker y Kubernetes (si estás usando)
+*.dockerignore
+docker-compose.override.yml
+.env
+.env.*
+.kube/
+
+# Otros específicos de .NET y entorno
+*.vsconfig

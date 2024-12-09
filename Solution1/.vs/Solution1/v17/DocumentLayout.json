@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D61B2D9D-9074-4CFC-8384-09E604B670F7}|WebApi\\WebApi.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D61B2D9D-9074-4CFC-8384-09E604B670F7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D61B2D9D-9074-4CFC-8384-09E604B670F7}|WebApi\\WebApi.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D61B2D9D-9074-4CFC-8384-09E604B670F7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\services\\interfaz\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\services\\interfaz\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\services\\interfaz\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\services\\interfaz\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\daos\\interfaces\\ibookdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\daos\\interfaces\\ibookdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,13 +70,65 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\Services\\Interfaz\\IUserService.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\Services\\Interfaz\\IUserService.cs",
+              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\Services\\Interfaz\\IUserService.cs",
+              "RelativeToolTip": "ClassLibrary\\Services\\Interfaz\\IUserService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T21:16:57.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IBookDAO.cs",
+              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\DAOs\\Interfaces\\IBookDAO.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\DAOs\\Interfaces\\IBookDAO.cs",
+              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\DAOs\\Interfaces\\IBookDAO.cs",
+              "RelativeToolTip": "ClassLibrary\\DAOs\\Interfaces\\IBookDAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T21:16:30.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IBookService.cs",
+              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\Services\\Interfaz\\IBookService.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\Services\\Interfaz\\IBookService.cs",
+              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\Services\\Interfaz\\IBookService.cs",
+              "RelativeToolTip": "ClassLibrary\\Services\\Interfaz\\IBookService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T21:11:40.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "BookService.cs",
+              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\Services\\BookService.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\Services\\BookService.cs",
+              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\Services\\BookService.cs",
+              "RelativeToolTip": "ClassLibrary\\Services\\BookService.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAgwCUAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T21:11:39.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\WebApi\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "WebApi\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\WebApi\\Controllers\\UserController.cs",
               "RelativeToolTip": "WebApi\\Controllers\\UserController.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAgwB8AAAAlAAAA",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAIwB8AAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-09T21:01:13.467Z",
               "EditorCaption": ""
@@ -73,7 +141,7 @@
               "RelativeDocumentMoniker": "ClassLibrary\\Services\\UserService.cs",
               "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\Services\\UserService.cs",
               "RelativeToolTip": "ClassLibrary\\Services\\UserService.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAwH8AAAAAAAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAAAYwC4AAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-09T20:22:50.636Z",
               "EditorCaption": ""

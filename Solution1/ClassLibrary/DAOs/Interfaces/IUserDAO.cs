@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary.DAOs
+namespace ClassLibrary.DAOs.Interfaces
 {
     public interface IUserDAO
     {
@@ -17,7 +17,7 @@ namespace ClassLibrary.DAOs
 
         public int Create(User user);
 
-        public int Update(User user);
+        public int Update(int id, User user);
 
         public int DeleteById(int id);
 

@@ -1,4 +1,4 @@
-﻿using ClassLibrary.DAOs;
+﻿using ClassLibrary.DAOs.Interfaces;
 using ClassLibrary.DTOs;
 using ClassLibrary.models;
 using Configuracion;
@@ -69,12 +69,12 @@ namespace WebApi.Controllers
             }
         }
 
-        [HttpPut]
-        public IActionResult Update([FromBody] User user)
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, [FromBody] User user)
         {
             try
             {
-                _userDAO.Update(user);
+                _userDAO.Update(id, user);
                 return Ok("Usuario actualizado correctamente");
             }
             catch (Exception ex)

@@ -1,23 +1,13 @@
 ﻿using ClassLibrary.DTOs;
 using ClassLibrary.models;
+using ClassLibrary.DAOs.Interfaces;
 using Dapper;
-using Microsoft.AspNetCore.DataProtection.KeyManagement;
-using Microsoft.IdentityModel.Tokens;
 using MySqlConnector;
-using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
-using System.Reflection;
-using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace ClassLibrary.DAOs
 {
 
-    public class UserDAO : IUserDAO
+    public class UserDAO : IUserDAO 
     {
         private static UserDAO _instance;
         private string connectionString = "Server=127.0.0.1;Port=3307;Database=apiExtradosDB;User Id=root;Password=root1234;";
@@ -43,7 +33,7 @@ namespace ClassLibrary.DAOs
 
         public IEnumerable<User> GetAllUsers()
         {
-            string query = "select id, email, name, last_name, age from usuarios where active=true";
+            string query = "select id, email, name, last_name, age from users where active=true";
 
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -61,11 +51,11 @@ namespace ClassLibrary.DAOs
 
         public User GetById(int id)
         {
-            string query = "select id, email, name, last_name, age, active from usuarios where id = @id and active = true";
+            string query = "select id, email, name, last_name, age, active from users where id = @id and active = true";
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                var user = connection.QueryFirstOrDefault<dynamic>(query, new { id });
+                var user = connection.QueryFirstOrDefault<User>(query, new { id });
 
                 if (user == null)
                 {
@@ -73,12 +63,12 @@ namespace ClassLibrary.DAOs
                 }
                 return new User
                 {
-                    Id = user.id,
-                    Email = user.email,
-                    Name = user.name,
-                    LastName = user.last_name,
-                    Age = user.age,
-                    Active = user.active,
+                    Id = user.Id,
+                    Email = user.Email,
+                    Name = user.Name,
+                    LastName = user.LastName,
+                    Age = user.Age,
+                    Active = user.Active,
                 };
             }
 
@@ -87,7 +77,7 @@ namespace ClassLibrary.DAOs
         public int Create(User user)
         {
 
-            string query = "insert into usuarios (email, hashed_password, name, last_name, age) values (@email, @password, @name, @lastName, @age)";
+            string query = "insert into users (email, hashed_password, name, last_name, age) values (@email, @password, @name, @lastName, @age)";
 
             string hashedPassword = BCrypt.Net.BCrypt.HashPassword(user.Password);
             
@@ -100,10 +90,10 @@ namespace ClassLibrary.DAOs
             }
         }
 
-        public int Update(User user)
+        public int Update(int id,User user)
         {
 
-            string query = "update usuarios set name = @name, last_name = @last_name, age = @age" +
+            string query = "update users set name = @name, last_name = @last_name, age = @age " +
                 "where id = @id";
 
             string hashedPassword = BCrypt.Net.BCrypt.HashPassword(user.Password);
@@ -116,7 +106,7 @@ namespace ClassLibrary.DAOs
                     name = user.Name,
                     last_name = user.LastName,
                     age = user.Age,
-                    id = user.Id
+                    id = id
                 });
                 return affectedRows;
             }
@@ -124,7 +114,7 @@ namespace ClassLibrary.DAOs
 
         public int DeleteById(int id)
         {
-            string query = "update usuarios set active = @active where id = @id";
+            string query = "update users set active = @active where id = @id";
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
@@ -134,7 +124,7 @@ namespace ClassLibrary.DAOs
 
         public User GetByEmail(string email)
         {
-            string query = "select id, email, hashed_password, name, last_name, age from usuarios " +
+            string query = "select id, email, hashed_password, name, last_name, age from users " +
                 "where email = @email and active = true";
             using (var connection = new MySqlConnection(connectionString))
             {

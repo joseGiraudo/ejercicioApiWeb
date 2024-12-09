@@ -1,4 +1,5 @@
 using ClassLibrary.DAOs;
+using ClassLibrary.DAOs.Interfaces;
 using Configuracion;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -17,6 +18,8 @@ builder.Services.AddSwaggerGen();
 // agrego la dependencia del DAO a la app
 builder.Services.AddSingleton<IUserDAO>(UserDAO.Instance);
 // builder.Services.AddScoped<IUserDAO, UserDAO>();
+
+builder.Services.AddScoped<IBookDAO, BookDAO>();
 
 builder.Services.Configure<JwtConfiguration>(builder.Configuration.GetSection("Jwt"));
 

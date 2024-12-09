@@ -49,9 +49,21 @@ namespace ClassLibrary.Services
 
         }
 
-        public Task<ApiResponse<string>> DeleteById(int id)
+        public async Task<ApiResponse<string>> DeleteById(int id)
         {
-            throw new NotImplementedException();
+            var response = new ApiResponse<string>();
+
+            try
+            {
+                _userDAO.DeleteById(id);
+                response.Data = "Se elimino el usuario con id: " + id;
+                return response;
+            }
+            catch (Exception ex)
+            {
+                response.SetError(ex.Message, System.Net.HttpStatusCode.InternalServerError);
+                return response;
+            }
         }
 
         public async Task<ApiResponse<List<User>>> GetAllUsers()

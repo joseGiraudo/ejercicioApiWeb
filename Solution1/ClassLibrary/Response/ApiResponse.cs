@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary.Response
 {
-    internal class ApiResponse<T>
+    public class ApiResponse<T>
     {
         public T Data { get; set; }
         public bool Success { get; set; }

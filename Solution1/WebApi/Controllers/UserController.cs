@@ -1,6 +1,8 @@
 ﻿using ClassLibrary.DAOs.Interfaces;
 using ClassLibrary.DTOs;
+using ClassLibrary.DTOs.UserDTOs;
 using ClassLibrary.models;
+using ClassLibrary.Services.Interfaz;
 using Configuracion;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -16,131 +18,82 @@ namespace WebApi.Controllers
     [Route("users")]
     public class UserController : ControllerBase
     {
-        private readonly IUserDAO _userDAO;
+        private readonly IUserService _userService;
 
         private JwtConfiguration _jwtConfiguration;
 
-        public UserController(IUserDAO userDAO, IOptions<JwtConfiguration> jwtConfiguration)
+        public UserController(IUserService userService, IOptions<JwtConfiguration> jwtConfiguration)
         {
-            _userDAO = userDAO;
+            _userService = userService;
             _jwtConfiguration = jwtConfiguration.Value;
         }
 
         [HttpGet]
-        public IActionResult GetAllUsers()
+        public async Task<IActionResult> GetAllUsers()
         {
-            try
+            var response = await _userService.GetAllUsers();
+            if (!response.Success)
             {
-                var users = _userDAO.GetAllUsers();
-                return Ok(users);
+                return BadRequest(response);
             }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return Ok(response);
         }
 
         [HttpGet("{id}")]
         [Authorize(Roles = "Admin")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            try
+            var response = await _userService.GetById(id);
+            if (!response.Success)
             {
-                var user = _userDAO.GetById(id);
-                return Ok(user);
+                return BadRequest(response);
             }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return Ok(response);
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody] User user)
+        public async Task<IActionResult> Create([FromBody] UserPostDTO user)
         {
-            try
+            var response = await _userService.Create(user);
+            if(!response.Success)
             {
-                _userDAO.Create(user);
-                return Ok("Usuario creado correctamente");
+                return BadRequest(response);
             }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return Ok(response);
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, [FromBody] User user)
+        public async Task<IActionResult> Update(int id, [FromBody] UserPostDTO user)
         {
-            try
+            var response = await _userService.Update(id, user);
+            if (!response.Success)
             {
-                _userDAO.Update(id, user);
-                return Ok("Usuario actualizado correctamente");
+                return BadRequest(response);
             }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return Ok(response);
         }
 
         [HttpDelete]
         [Authorize(Roles = "Admin")]
-        public IActionResult DeleteById(int id)
+        public async Task<IActionResult> DeleteById(int id)
         {
-            try
+            var response = await _userService.GetAllUsers();
+            if (!response.Success)
             {
-                _userDAO.DeleteById(id);
-                return Ok("Usuario Eliminado correctamente");
+                return BadRequest(response);
             }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return Ok(response);
         }
 
         [HttpPost("login")]
-        public IActionResult Login([FromBody] LoginDTO loginDTO)
+        public async Task<IActionResult> Login([FromBody] LoginDTO loginDTO)
         {
-            try
+            var response = await _userService.Login(loginDTO);
+            if (!response.Success)
             {
-                var user = _userDAO.Login(loginDTO);
-                
-                var token = GenerateToken(user);
-
-                return Ok(token);
+                return BadRequest(response);
             }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
-
-
-        private string GenerateToken(User user)
-        {
-            var claim = new[]
-            {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Role, "Admin")
-            };
-
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtConfiguration.Key));
-
-            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-            var securityToken = new JwtSecurityToken
-                (
-                    _jwtConfiguration.Issuer,
-                    _jwtConfiguration.Audience,
-                    claims: claim,
-                    expires: DateTime.Now.AddMinutes(120),
-                    signingCredentials: credentials
-                );
-
-            var token = new JwtSecurityTokenHandler().WriteToken(securityToken);
-            return token;
+            return Ok(response);
         }
     }
 }

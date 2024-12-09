@@ -9,31 +9,16 @@ namespace ClassLibrary.DAOs
 
     public class UserDAO : IUserDAO 
     {
-        private static UserDAO _instance;
         private string connectionString = "Server=127.0.0.1;Port=3307;Database=apiExtradosDB;User Id=root;Password=root1234;";
 
-        // constructor privado
-        private UserDAO()
-        {
-            
-        }
-
-        public static UserDAO Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new UserDAO();
-                }
-                return _instance;
-            }
-        }
+        
+        public UserDAO() { }
+        
 
 
         public IEnumerable<User> GetAllUsers()
         {
-            string query = "select id, email, name, last_name, age from users where active=true";
+            string query = "select id, email, name, lastName, age from users where active=true";
 
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -44,14 +29,14 @@ namespace ClassLibrary.DAOs
                 {
                     throw new Exception("No se encontraron usuarios");
                 }
-                // falta mapear los snake_case
+
                 return users;
             }
         }
 
         public User GetById(int id)
         {
-            string query = "select id, email, name, last_name, age, active from users where id = @id and active = true";
+            string query = "select id, email, name, lastName, age, active from users where id = @id and active = true";
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
@@ -77,7 +62,7 @@ namespace ClassLibrary.DAOs
         public int Create(User user)
         {
 
-            string query = "insert into users (email, hashed_password, name, last_name, age) values (@email, @password, @name, @lastName, @age)";
+            string query = "insert into users (email, hashedPassword, name, lastName, age) values (@email, @password, @name, @lastName, @age)";
 
             string hashedPassword = BCrypt.Net.BCrypt.HashPassword(user.Password);
             
@@ -90,10 +75,10 @@ namespace ClassLibrary.DAOs
             }
         }
 
-        public int Update(int id,User user)
+        public int Update(User user)
         {
 
-            string query = "update users set name = @name, last_name = @last_name, age = @age " +
+            string query = "update users set name = @name, lastName = @lastName, age = @age " +
                 "where id = @id";
 
             string hashedPassword = BCrypt.Net.BCrypt.HashPassword(user.Password);
@@ -104,9 +89,9 @@ namespace ClassLibrary.DAOs
                 var affectedRows = connection.Execute(query, new
                 {
                     name = user.Name,
-                    last_name = user.LastName,
+                    lastName = user.LastName,
                     age = user.Age,
-                    id = id
+                    id = user.Id
                 });
                 return affectedRows;
             }
@@ -124,7 +109,7 @@ namespace ClassLibrary.DAOs
 
         public User GetByEmail(string email)
         {
-            string query = "select id, email, hashed_password, name, last_name, age from users " +
+            string query = "select id, email, hashedPassword, name, lastName, age from users " +
                 "where email = @email and active = true";
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -139,9 +124,9 @@ namespace ClassLibrary.DAOs
                 {
                     Id = user.id,
                     Email = user.email,
-                    Password = user.hashed_password,
+                    Password = user.hashedPassword,
                     Name = user.name,
-                    LastName = user.last_name,
+                    LastName = user.lastName,
                     Age = user.age
                 };
             }

@@ -17,7 +17,7 @@ namespace ClassLibrary.DAOs.Interfaces
 
         public int Create(User user);
 
-        public int Update(int id, User user);
+        public int Update(User user);
 
         public int DeleteById(int id);
 

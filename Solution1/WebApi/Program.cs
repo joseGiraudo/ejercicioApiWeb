@@ -1,5 +1,7 @@
 using ClassLibrary.DAOs;
 using ClassLibrary.DAOs.Interfaces;
+using ClassLibrary.Services;
+using ClassLibrary.Services.Interfaz;
 using Configuracion;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -16,10 +18,16 @@ builder.Services.AddSwaggerGen();
 
 
 // agrego la dependencia del DAO a la app
-builder.Services.AddSingleton<IUserDAO>(UserDAO.Instance);
-// builder.Services.AddScoped<IUserDAO, UserDAO>();
+// builder.Services.AddSingleton<IUserDAO>(UserDAO.Instance);
+builder.Services.AddScoped<IUserDAO, UserDAO>();
+builder.Services.AddScoped<IUserService, UserService>();
+
 
 builder.Services.AddScoped<IBookDAO, BookDAO>();
+
+
+builder.Services.AddScoped<IBookLoanDAO, BookLoanDAO>();
+builder.Services.AddScoped<IBookLoanService, BookLoanService>();
 
 builder.Services.Configure<JwtConfiguration>(builder.Configuration.GetSection("Jwt"));
 
@@ -66,6 +74,8 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 
 app.UseAuthorization();
+
+app.UseCors();
 
 app.MapControllers();
 

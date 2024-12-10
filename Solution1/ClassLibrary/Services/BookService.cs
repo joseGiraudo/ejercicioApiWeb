@@ -38,19 +38,51 @@ namespace ClassLibrary.Services
             throw new NotImplementedException();
         }
 
-        public Task<ApiResponse<List<Book>>> GetAll()
+        public async Task<ApiResponse<List<Book>>> GetAll()
         {
-            throw new NotImplementedException();
+            var response = new ApiResponse<List<Book>>();
+
+            var books = _bookDAO.GetAll();
+
+            if(books == null || books.Count() == 0)
+            {
+                response.SetError("No se encontraron libros", System.Net.HttpStatusCode.NotFound);
+                return response;
+            }
+
+            response.Data = (List<Book>)books;
+            return response;
         }
 
-        public Task<ApiResponse<Book>> GetById(int id)
+        public async Task<ApiResponse<Book>> GetById(int id)
         {
-            throw new NotImplementedException();
+            var response = new ApiResponse<Book>();
+
+            var book = _bookDAO.GetById(id);
+
+            if (book == null)
+            {
+                response.SetError("No se encontró el libro con id: " + id, System.Net.HttpStatusCode.NotFound);
+                return response;
+            }
+
+            response.Data = book;
+            return response;
         }
 
-        public Task<ApiResponse<Book>> Update(int id, Book book)
+        public async Task<ApiResponse<Book>> Update(int id, Book book)
         {
-            throw new NotImplementedException();
+            var response = new ApiResponse<Book>();
+
+            var affRows = _bookDAO.Create(book);
+
+            if (affRows > 0)
+            {
+                response.Data = book;
+                return response;
+            }
+            response.SetError("No se pudo crear el usuario ", System.Net.HttpStatusCode.InternalServerError);
+            return response;
         }
     }
 }

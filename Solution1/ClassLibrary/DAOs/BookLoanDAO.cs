@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ClassLibrary.DAOs
 {
@@ -18,7 +19,7 @@ namespace ClassLibrary.DAOs
 
         public BookLoan LoanBook(BookLoan bookLoan)
         {
-            string query = "insert into loan_books (bookId, userId, loanDate, dueDate, status) " +
+            string query = "insert into book_loans (bookId, userId, loanDate, dueDate, status) " +
                 "values(@bookId, @userId, @loanDate, @dueDate, @status)";
 
             using (var connection = new MySqlConnection(connectionString))
@@ -42,7 +43,7 @@ namespace ClassLibrary.DAOs
 
         public BookLoan ReturnBook(BookLoan bookLoan)
         {
-            string query = "update loan_books set returnDate = @returnDate, status = @status where id = @id";
+            string query = "update book_loans set returnDate = @returnDate, status = @status where id = @id";
 
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -58,6 +59,19 @@ namespace ClassLibrary.DAOs
                     return bookLoan;
                 }
                 return null;
+            }
+        }
+
+        public BookLoan GetById(int id)
+        {
+            string query = "select * from book_loans where id = @id";
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var bookLoan = connection.QueryFirstOrDefault<BookLoan>(query, new { id });
+
+                return bookLoan;
             }
         }
     }

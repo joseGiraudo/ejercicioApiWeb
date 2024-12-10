@@ -1,6 +1,7 @@
 ﻿using ClassLibrary.DAOs;
 using ClassLibrary.DAOs.Interfaces;
 using ClassLibrary.models;
+using ClassLibrary.Services.Interfaz;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,82 +11,67 @@ namespace WebApi.Controllers
     [Route("books")]
     public class BookController : ControllerBase
     {
-        private readonly IBookDAO _bookDAO;
+        private readonly IBookService _bookService;
 
-        public BookController(IBookDAO bookDAO)
+        public BookController(IBookService bookService)
         {
-            _bookDAO = bookDAO;
+            _bookService = bookService;
         }
 
         [HttpGet]
-        public IActionResult GetAllBooks()
+        public async Task<IActionResult> GetAllBooks()
         {
-            try
+            var response = await _bookService.GetAll();
+            if (!response.Success)
             {
-                var books = _bookDAO.GetAll();
-                return Ok(books);
+                return BadRequest(response);
             }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return Ok(response);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            try
+            var response = await _bookService.GetById(id);
+            if (!response.Success)
             {
-                var book = _bookDAO.GetById(id);
-                return Ok(book);
+                return BadRequest(response);
             }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return Ok(response);
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody] Book book)
+        public async Task<IActionResult> Create([FromBody] Book book)
         {
-            try
+            var response = await _bookService.Create(book);
+            if (!response.Success)
             {
-                _bookDAO.Create(book);
-                return Ok("Libro creado correctamente");
+                return BadRequest(response);
             }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return Ok(response);
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, [FromBody] Book book)
+        public async Task<IActionResult> Update(int id, [FromBody] Book book)
         {
-            try
+            var response = await _bookService.Update(id, book);
+            if (!response.Success)
             {
-                _bookDAO.Update(id, book);
-                return Ok("Libro actualizado correctamente");
+                return BadRequest(response);
             }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return Ok(response);
         }
 
         [HttpDelete]
         [Authorize(Roles = "Admin")]
-        public IActionResult DeleteById(int id)
+        public async Task<IActionResult> DeleteById(int id)
         {
-            try
+            var response = await _bookService.DeleteById(id);
+            if (!response.Success)
             {
-                _bookDAO.DeleteById(id);
-                return Ok("Libro Eliminado correctamente");
+                return BadRequest(response);
             }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return Ok(response);
         }
     }
 }

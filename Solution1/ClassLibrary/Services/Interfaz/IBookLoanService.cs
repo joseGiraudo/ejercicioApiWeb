@@ -13,6 +13,7 @@ namespace ClassLibrary.Services.Interfaz
     {
         public Task<ApiResponse<BookLoan>> LoanBook(BookLoanDTO bookLoanDto);
         
-        public Task<ApiResponse<BookLoan>> ReturnBook(BookLoanDTO bookLoanDto);
+        public Task<ApiResponse<BookLoan>> ReturnBook(BookReturnDTO bookReturnDto);
+        public Task<ApiResponse<BookLoan>> ReturnBook(int id);
     }
 }

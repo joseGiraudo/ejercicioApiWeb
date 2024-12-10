@@ -13,5 +13,6 @@ namespace ClassLibrary.DAOs.Interfaces
         public BookLoan LoanBook(BookLoan bookLoan);
 
         public BookLoan ReturnBook(BookLoan bookLoan);
+        public BookLoan GetById(int id);
     }
 }

@@ -33,4 +33,6 @@ CREATE TABLE book_loans (
     FOREIGN KEY (userId) REFERENCES users(id)
 );
 
-SELECT * FROM books
+SELECT * FROM books;
+
+SELECT * FROM book_loans;

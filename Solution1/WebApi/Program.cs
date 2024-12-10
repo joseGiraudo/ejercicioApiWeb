@@ -24,6 +24,7 @@ builder.Services.AddScoped<IUserService, UserService>();
 
 
 builder.Services.AddScoped<IBookDAO, BookDAO>();
+builder.Services.AddScoped<IBookService, BookService>();
 
 
 builder.Services.AddScoped<IBookLoanDAO, BookLoanDAO>();

@@ -1,4 +1,5 @@
-﻿using ClassLibrary.DAOs.Interfaces;
+﻿using ClassLibrary.DAOs;
+using ClassLibrary.DAOs.Interfaces;
 using ClassLibrary.DTOs;
 using ClassLibrary.models;
 using ClassLibrary.Response;
@@ -21,6 +22,21 @@ namespace ClassLibrary.Services
             _bookLoanDao = bookLoanDao;
         }
 
+        public async Task<ApiResponse<List<BookLoan>>> GetAll()
+        {
+            var response = new ApiResponse<List<BookLoan>>();
+
+            var bookLoans = _bookLoanDao.GetAll();
+
+            if (bookLoans == null || !bookLoans.Any())
+            {
+                response.SetError("No se encontraron prestamos", System.Net.HttpStatusCode.NotFound);
+                return response;
+            }
+
+            response.Data = (List<BookLoan>)bookLoans;
+            return response;
+        }
 
         public async Task<ApiResponse<BookLoan>> LoanBook(BookLoanDTO bookLoanDto)
         {

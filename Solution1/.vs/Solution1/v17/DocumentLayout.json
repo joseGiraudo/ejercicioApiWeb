@@ -3,24 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\daos\\bookloandao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\daos\\bookloandao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\services\\bookloanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\services\\bookloanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D61B2D9D-9074-4CFC-8384-09E604B670F7}|WebApi\\WebApi.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\webapi\\controllers\\bookloancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D61B2D9D-9074-4CFC-8384-09E604B670F7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\bookloancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\services\\interfaz\\ibookloanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\services\\interfaz\\ibookloanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\services\\bookloanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\services\\bookloanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\services\\interfaz\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\services\\interfaz\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\daos\\interfaces\\ibookloandao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\daos\\interfaces\\ibookloandao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\daos\\bookloandao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\daos\\bookloandao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\daos\\bookdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\daos\\bookdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\models\\bookloan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\models\\bookloan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\dtos\\bookloandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\dtos\\bookloandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\classlibrary\\dtos\\bookreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FA57EFD-FAF4-4D0A-B5B1-6136E7FC6814}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\dtos\\bookreturndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D61B2D9D-9074-4CFC-8384-09E604B670F7}|WebApi\\WebApi.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D61B2D9D-9074-4CFC-8384-09E604B670F7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D61B2D9D-9074-4CFC-8384-09E604B670F7}|WebApi\\WebApi.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\webapi\\controllers\\bookloancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D61B2D9D-9074-4CFC-8384-09E604B670F7}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\bookloancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D61B2D9D-9074-4CFC-8384-09E604B670F7}|WebApi\\WebApi.csproj|c:\\users\\joseg\\onedrive\\documentos\\bootcamp extrados\\segunda parte - be\\ejercicioapiweb\\solution1\\webapi\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,20 +98,136 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "IBookService.cs",
+              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\Services\\Interfaz\\IBookService.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\Services\\Interfaz\\IBookService.cs",
+              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\Services\\Interfaz\\IBookService.cs",
+              "RelativeToolTip": "ClassLibrary\\Services\\Interfaz\\IBookService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T18:36:07.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IBookLoanDAO.cs",
+              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\DAOs\\Interfaces\\IBookLoanDAO.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\DAOs\\Interfaces\\IBookLoanDAO.cs",
+              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\DAOs\\Interfaces\\IBookLoanDAO.cs",
+              "RelativeToolTip": "ClassLibrary\\DAOs\\Interfaces\\IBookLoanDAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T18:35:53.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "BookLoanDAO.cs",
               "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\DAOs\\BookLoanDAO.cs",
               "RelativeDocumentMoniker": "ClassLibrary\\DAOs\\BookLoanDAO.cs",
               "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\DAOs\\BookLoanDAO.cs",
               "RelativeToolTip": "ClassLibrary\\DAOs\\BookLoanDAO.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAowEIAAAA0AAAA",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAuwE0AAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T15:08:49.325Z",
+              "WhenOpened": "2024-12-10T18:09:41.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IBookLoanService.cs",
+              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\Services\\Interfaz\\IBookLoanService.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\Services\\Interfaz\\IBookLoanService.cs",
+              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\Services\\Interfaz\\IBookLoanService.cs",
+              "RelativeToolTip": "ClassLibrary\\Services\\Interfaz\\IBookLoanService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA4AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T15:04:32.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookLoanService.cs",
+              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\Services\\BookLoanService.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\Services\\BookLoanService.cs",
+              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\Services\\BookLoanService.cs",
+              "RelativeToolTip": "ClassLibrary\\Services\\BookLoanService.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAjwCIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T15:03:09.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BookLoanController.cs",
+              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\WebApi\\Controllers\\BookLoanController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\BookLoanController.cs",
+              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\WebApi\\Controllers\\BookLoanController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\BookLoanController.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAuwC0AAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T15:01:26.346Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "BookService.cs",
+              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\Services\\BookService.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\Services\\BookService.cs",
+              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\Services\\BookService.cs",
+              "RelativeToolTip": "ClassLibrary\\Services\\BookService.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAA9wDUAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T18:36:53.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BookDAO.cs",
+              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\DAOs\\BookDAO.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\DAOs\\BookDAO.cs",
+              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\DAOs\\BookDAO.cs",
+              "RelativeToolTip": "ClassLibrary\\DAOs\\BookDAO.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAwwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T18:11:12.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BookLoan.cs",
+              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\models\\BookLoan.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\models\\BookLoan.cs",
+              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\models\\BookLoan.cs",
+              "RelativeToolTip": "ClassLibrary\\models\\BookLoan.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAIwAwAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T15:13:27.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BookReturnDTO.cs",
+              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\DTOs\\BookReturnDTO.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\DTOs\\BookReturnDTO.cs",
+              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\DTOs\\BookReturnDTO.cs",
+              "RelativeToolTip": "ClassLibrary\\DTOs\\BookReturnDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T15:13:09.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\WebApi\\Program.cs",
               "RelativeDocumentMoniker": "WebApi\\Program.cs",
@@ -91,38 +235,23 @@
               "RelativeToolTip": "WebApi\\Program.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T15:06:02.82Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T15:06:02.82Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IBookLoanService.cs",
-              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\Services\\Interfaz\\IBookLoanService.cs",
-              "RelativeDocumentMoniker": "ClassLibrary\\Services\\Interfaz\\IBookLoanService.cs",
-              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\Services\\Interfaz\\IBookLoanService.cs",
-              "RelativeToolTip": "ClassLibrary\\Services\\Interfaz\\IBookLoanService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA8AAABRAAAA",
+              "DocumentIndex": 9,
+              "Title": "BookLoanDTO.cs",
+              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\DTOs\\BookLoanDTO.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\DTOs\\BookLoanDTO.cs",
+              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\DTOs\\BookLoanDTO.cs",
+              "RelativeToolTip": "ClassLibrary\\DTOs\\BookLoanDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T15:04:32.175Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T15:13:11.876Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BookLoanService.cs",
-              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\Services\\BookLoanService.cs",
-              "RelativeDocumentMoniker": "ClassLibrary\\Services\\BookLoanService.cs",
-              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\ClassLibrary\\Services\\BookLoanService.cs",
-              "RelativeToolTip": "ClassLibrary\\Services\\BookLoanService.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAqwA4AAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T15:03:09.638Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "BookController.cs",
               "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\WebApi\\Controllers\\BookController.cs",
               "RelativeDocumentMoniker": "WebApi\\Controllers\\BookController.cs",
@@ -130,21 +259,7 @@
               "RelativeToolTip": "WebApi\\Controllers\\BookController.cs",
               "ViewState": "AQIAACAAAAAAAAAAAAA9wDYAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T15:01:31.917Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BookLoanController.cs",
-              "DocumentMoniker": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\WebApi\\Controllers\\BookLoanController.cs",
-              "RelativeDocumentMoniker": "WebApi\\Controllers\\BookLoanController.cs",
-              "ToolTip": "C:\\Users\\joseg\\OneDrive\\Documentos\\bootcamp extrados\\segunda parte - BE\\ejercicioApiWeb\\Solution1\\WebApi\\Controllers\\BookLoanController.cs",
-              "RelativeToolTip": "WebApi\\Controllers\\BookLoanController.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAIwCgAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T15:01:26.346Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T15:01:31.917Z"
             }
           ]
         },

@@ -39,5 +39,16 @@ namespace WebApi.Controllers
             }
             return Ok(response);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var response = await _bookLoanService.GetAll();
+            if (!response.Success)
+            {
+                return BadRequest(response);
+            }
+            return Ok(response);
+        }
     }
 }

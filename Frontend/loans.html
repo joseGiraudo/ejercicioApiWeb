@@ -31,10 +31,10 @@
                     <h4 class="navbar-brand" id="userHeader">Bienvenido</h4>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/index.html">Libros</a>
+                        <a class="nav-link" aria-current="page" href="/index.html">Libros</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="/loans.html">Prestamos</a>
+                        <a class="nav-link active" href="/loans.html">Prestamos</a>
                         </li>
                     </ul>
                 </div>
@@ -48,8 +48,12 @@
             <thead>
                 <tr>
                 <th scope="col">Id</th>
-                <th scope="col">Titulo</th>
-                <th scope="col">Autor</th>
+                <th scope="col">User ID</th>
+                <th scope="col">Book ID</th>
+                <th scope="col">Loan Date</th>
+                <th scope="col">Due Date</th>
+                <th scope="col">Return Date</th>
+                <th scope="col">Status</th>
                 </tr>
             </thead>
             <tbody id="tBody">
@@ -74,7 +78,7 @@
             const msg = document.getElementById("userHeader");
             msg.textContent = `Bienvenido, ${user.name}`;
 
-            getBooks();
+            getLoans();
         });
 
         // obtener configuraciones
@@ -90,38 +94,95 @@
             .then(response => response.json())
             .then(data => {
                 console.log("data: ", data)
-                books = data.data;
+                books = data;
 
                 cargarTabla(books);
-                
-
             });
 
         }
 
+        function getLoans() {
+            let loans;
+            
+            fetch("https://localhost:7176/loans", {
+                method: 'GET',
+                headers: {
+                    'Content-Type': "application/json"
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("data: ", data)
+                loans = data.data;
 
-        function cargarTabla(books) {
+                cargarTabla(loans);
+            });
+        }
+
+        function LoanBook(userId, bookId) {
+
+            const data = {
+                userId,
+                bookId,
+                loanDate: Date.UTC(Date.now)
+            }
+            
+            fetch("https://localhost:7176/loans", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("data: ", data)
+                
+
+                // vuelvo a cargar la tabla
+                getLoans();
+            });
+        }
+
+
+        function cargarTabla(loans) {
             const tbody = document.getElementById("tBody");
             tbody.innerHTML = "";
     
-            books.forEach(book => {
+            loans.forEach(loan => {
                 // Crear una nueva fila
                 const row = document.createElement("tr");
     
                 // Crear las celdas
                 const idCell = document.createElement("td");
-                idCell.textContent = book.id;
+                idCell.textContent = loan.id;
+
+                const userIdCell = document.createElement("td");
+                userIdCell.textContent = loan.userId;
                 
-                const titleCell = document.createElement("td");
-                titleCell.textContent = book.title;
+                const bookIdCell = document.createElement("td");
+                bookIdCell.textContent = loan.bookId;
+
+                const loanDateCell = document.createElement("td");
+                loanDateCell.textContent = loan.loanDate;
+
+                const dueDateCell = document.createElement("td");
+                dueDateCell.textContent = loan.dueDate;
+                
+                const returnDateCell = document.createElement("td");
+                returnDateCell.textContent = loan.returnDate;
     
-                const authorCell = document.createElement("td");
-                authorCell.textContent = book.author;
+                const statusCell = document.createElement("td");
+                statusCell.textContent = loan.status;
     
                 // Agregar celdas a la fila
                 row.appendChild(idCell);
-                row.appendChild(titleCell);
-                row.appendChild(authorCell);
+                row.appendChild(userIdCell);
+                row.appendChild(bookIdCell);
+                row.appendChild(loanDateCell);
+                row.appendChild(dueDateCell);
+                row.appendChild(returnDateCell);
+                row.appendChild(statusCell);
     
                 // Agregar la fila al cuerpo de la tabla
                 tbody.appendChild(row);

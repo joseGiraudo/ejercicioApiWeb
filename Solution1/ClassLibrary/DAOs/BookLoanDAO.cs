@@ -74,5 +74,18 @@ namespace ClassLibrary.DAOs
                 return bookLoan;
             }
         }
+
+        public IEnumerable<BookLoan> GetAll()
+        {
+            string query = "select * from book_loans";
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                var bookLoans = connection.Query<BookLoan>(query);
+
+                return bookLoans;
+            }
+        }
     }
 }

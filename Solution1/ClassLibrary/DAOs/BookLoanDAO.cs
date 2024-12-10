@@ -2,6 +2,7 @@
 using ClassLibrary.DTOs;
 using ClassLibrary.models;
 using Dapper;
+using Microsoft.Extensions.Configuration;
 using Microsoft.VisualBasic;
 using MySqlConnector;
 using System;
@@ -15,14 +16,19 @@ namespace ClassLibrary.DAOs
 {
     public class BookLoanDAO : IBookLoanDAO
     {
-        private string connectionString = "Server=127.0.0.1;Port=3307;Database=apiExtradosDB;User Id=root;Password=root1234;";
+        private readonly string _connectionString;
+
+        public BookLoanDAO(IConfiguration configuration)
+        {
+            _connectionString = configuration.GetConnectionString("ConnectionString");
+        }
 
         public BookLoan LoanBook(BookLoan bookLoan)
         {
             string query = "insert into book_loans (bookId, userId, loanDate, dueDate, status) " +
                 "values(@bookId, @userId, @loanDate, @dueDate, @status)";
 
-            using (var connection = new MySqlConnection(connectionString))
+            using (var connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
                 int affRows = connection.Execute(query, new
@@ -45,7 +51,7 @@ namespace ClassLibrary.DAOs
         {
             string query = "update book_loans set returnDate = @returnDate, status = @status where id = @id";
 
-            using (var connection = new MySqlConnection(connectionString))
+            using (var connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
                 int affRows = connection.Execute(query, new
@@ -66,7 +72,7 @@ namespace ClassLibrary.DAOs
         {
             string query = "select * from book_loans where id = @id";
 
-            using (var connection = new MySqlConnection(connectionString))
+            using (var connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
                 var bookLoan = connection.QueryFirstOrDefault<BookLoan>(query, new { id });
@@ -79,7 +85,7 @@ namespace ClassLibrary.DAOs
         {
             string query = "select * from book_loans";
 
-            using (var connection = new MySqlConnection(connectionString))
+            using (var connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
                 var bookLoans = connection.Query<BookLoan>(query);

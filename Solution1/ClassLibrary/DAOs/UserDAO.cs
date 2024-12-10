@@ -3,16 +3,19 @@ using ClassLibrary.models;
 using ClassLibrary.DAOs.Interfaces;
 using Dapper;
 using MySqlConnector;
+using Microsoft.Extensions.Configuration;
 
 namespace ClassLibrary.DAOs
 {
 
     public class UserDAO : IUserDAO 
     {
-        private string connectionString = "Server=127.0.0.1;Port=3307;Database=apiExtradosDB;User Id=root;Password=root1234;";
+        private readonly string _connectionString;
 
-        
-        public UserDAO() { }
+        public UserDAO(IConfiguration configuration) 
+        {
+            _connectionString = configuration.GetConnectionString("ConnectionString");
+        }
         
 
 
@@ -20,7 +23,7 @@ namespace ClassLibrary.DAOs
         {
             string query = "select id, email, name, lastName, age from users where active=true";
 
-            using (var connection = new MySqlConnection(connectionString))
+            using (var connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
                 var users = connection.Query<User>(query);
@@ -37,7 +40,7 @@ namespace ClassLibrary.DAOs
         public User GetById(int id)
         {
             string query = "select id, email, name, lastName, age, active from users where id = @id and active = true";
-            using (var connection = new MySqlConnection(connectionString))
+            using (var connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
                 var user = connection.QueryFirstOrDefault<User>(query, new { id });
@@ -66,7 +69,7 @@ namespace ClassLibrary.DAOs
 
             string hashedPassword = BCrypt.Net.BCrypt.HashPassword(user.Password);
             
-            using (var connection = new MySqlConnection(connectionString))
+            using (var connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
                 var affectedRows = connection.Execute(query, new { email = user.Email, password = hashedPassword,
@@ -83,7 +86,7 @@ namespace ClassLibrary.DAOs
 
             string hashedPassword = BCrypt.Net.BCrypt.HashPassword(user.Password);
 
-            using (var connection = new MySqlConnection(connectionString))
+            using (var connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
                 var affectedRows = connection.Execute(query, new
@@ -100,7 +103,7 @@ namespace ClassLibrary.DAOs
         public int DeleteById(int id)
         {
             string query = "update users set active = @active where id = @id";
-            using (var connection = new MySqlConnection(connectionString))
+            using (var connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
                 return connection.Execute(query, new { id = id, active = false });
@@ -111,7 +114,7 @@ namespace ClassLibrary.DAOs
         {
             string query = "select id, email, hashedPassword, name, lastName, age from users " +
                 "where email = @email and active = true";
-            using (var connection = new MySqlConnection(connectionString))
+            using (var connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
                 var user = connection.QueryFirstOrDefault<dynamic>(query, new { email });

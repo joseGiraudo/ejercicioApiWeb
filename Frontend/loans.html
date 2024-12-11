@@ -31,29 +31,33 @@
                     <h4 class="navbar-brand" id="userHeader">Bienvenido</h4>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/index.html">Libros</a>
+                            <a class="nav-link" aria-current="page" href="/index.html">Libros</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link active" href="/loans.html">Prestamos</a>
+                            <a class="nav-link active" href="/loans.html">Prestamos</a>
                         </li>
                     </ul>
+                    <div class="d-flex">
+                        <button class="btn btn-outline-secondary" onclick="logout()">Cerrar Sesión</button>
+                    </div>
                 </div>
             </div>
         </nav>
 
 
-        <div class="row"><h1 class="p-3 mb-2 bg-primary text-white">Reserva de libros</h1></div>
+        <hr>
+        <div class="row"><h2 class="p-3 mb-3">Reserva de libros</h2></div>
 
         <table class="table">
             <thead>
                 <tr>
                 <th scope="col">Id</th>
-                <th scope="col">User ID</th>
-                <th scope="col">Book ID</th>
-                <th scope="col">Loan Date</th>
-                <th scope="col">Due Date</th>
-                <th scope="col">Return Date</th>
-                <th scope="col">Status</th>
+                <th scope="col">Usuario</th>
+                <th scope="col">Libro</th>
+                <th scope="col">Fecha Prestamo</th>
+                <th scope="col">Vencimiento</th>
+                <th scope="col">Fecha Devolución</th>
+                <th scope="col">Estado</th>
                 </tr>
             </thead>
             <tbody id="tBody">
@@ -80,6 +84,12 @@
 
             getLoans();
         });
+
+        function logout() {
+            localStorage.clear();
+            alert("Cerrando sesión");
+            window.location.href = "/login.html";
+        }
 
         // obtener configuraciones
         function getBooks() {
@@ -148,6 +158,12 @@
         function cargarTabla(loans) {
             const tbody = document.getElementById("tBody");
             tbody.innerHTML = "";
+
+            const options = {
+                year: "numeric",
+                month: "short", // "short" para abreviar el mes
+                day: "numeric",
+            };
     
             loans.forEach(loan => {
                 // Crear una nueva fila
@@ -158,19 +174,29 @@
                 idCell.textContent = loan.id;
 
                 const userIdCell = document.createElement("td");
-                userIdCell.textContent = loan.userId;
+                userIdCell.textContent = loan.user.name;
                 
                 const bookIdCell = document.createElement("td");
-                bookIdCell.textContent = loan.bookId;
+                const link = document.createElement("a");
+                link.textContent = loan.book.title;
+                link.href = `/book-detail.html?id=${loan.book.id}`;
+                link.target = "_self";
+                link.style = "text-decoration: none; color: black;"
+
+                bookIdCell.appendChild(link);
 
                 const loanDateCell = document.createElement("td");
-                loanDateCell.textContent = loan.loanDate;
+                loanDateCell.textContent = new Date(loan.loanDate).toLocaleDateString() + ' - ' + new Date(loan.loanDate).toTimeString().slice(0, 5);
 
                 const dueDateCell = document.createElement("td");
-                dueDateCell.textContent = loan.dueDate;
+                dueDateCell.textContent = new Date(loan.dueDate).toLocaleDateString() + ' - ' + new Date(loan.dueDate).toTimeString().slice(0, 5);
                 
                 const returnDateCell = document.createElement("td");
-                returnDateCell.textContent = loan.returnDate;
+                if(loan.returnDate) {
+                    returnDateCell.textContent = new Date(loan.returnDate).toLocaleDateString() + ' - ' + new Date(loan.returnDate).toTimeString().slice(0, 5);
+                } else {
+                    returnDateCell.textContent = 'N/A'
+                }
     
                 const statusCell = document.createElement("td");
                 statusCell.textContent = loan.status;

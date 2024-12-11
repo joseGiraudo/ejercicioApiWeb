@@ -93,5 +93,32 @@ namespace ClassLibrary.DAOs
                 return bookLoans;
             }
         }
+
+        public async Task<List<BookLoan>> GetAllAsync()
+        {
+            const string query = @"
+                SELECT bl.id, bl.loanDate, bl.dueDate, bl.returnDate, bl.status, 
+                       u.id, u.name, u.email, u.lastName, u.age,
+                       b.id, b.title, b.author
+                FROM book_loans bl
+                INNER JOIN users u ON bl.userId = u.id
+                INNER JOIN books b ON bl.bookId = b.id";
+
+            using (var connection = new MySqlConnection(_connectionString))
+            {
+                var bookLoans = await connection.QueryAsync<BookLoan, User, Book, BookLoan>(
+                    query,
+                    (bookLoan, user, book) =>
+                    {
+                        bookLoan.User = user;
+                        bookLoan.Book = book;
+                        return bookLoan;
+                    },
+                    splitOn: "id, id" // Indica los puntos de división
+                );
+
+                return bookLoans.ToList();
+            }
+        }
     }
 }

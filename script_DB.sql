@@ -25,9 +25,9 @@ CREATE TABLE book_loans (
     id INT AUTO_INCREMENT PRIMARY KEY,
     bookId INT NOT NULL, 
     userId INT NOT NULL, 
-    loanDate DATE NOT NULL, 
-    dueDate DATE NOT NULL, 
-    returnDate DATE, 
+    loanDate DATETIME NOT NULL, 
+    dueDate DATETIME NOT NULL, 
+    returnDate DATETIME, 
     status VARCHAR(50),
     FOREIGN KEY (bookId) REFERENCES books(id),
     FOREIGN KEY (userId) REFERENCES users(id)
@@ -36,3 +36,10 @@ CREATE TABLE book_loans (
 SELECT * FROM books;
 
 SELECT * FROM book_loans;
+
+SELECT bl.id, bl.loanDate, bl.dueDate, bl.returnDate, bl.status, 
+       u.id AS userId, u.name, u.email, u.lastName, u.age,
+       b.id AS bookId, b.title, b.author
+FROM book_loans bl
+INNER JOIN users u ON bl.userId = u.id
+INNER JOIN books b ON bl.bookId = b.id;

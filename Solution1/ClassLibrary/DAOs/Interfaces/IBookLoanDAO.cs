@@ -15,5 +15,7 @@ namespace ClassLibrary.DAOs.Interfaces
         public BookLoan ReturnBook(BookLoan bookLoan);
         public BookLoan GetById(int id);
         public IEnumerable<BookLoan> GetAll();
+
+        public Task<List<BookLoan>> GetAllAsync();
     }
 }

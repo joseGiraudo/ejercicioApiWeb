@@ -26,15 +26,15 @@ namespace ClassLibrary.Services
         {
             var response = new ApiResponse<List<BookLoan>>();
 
-            var bookLoans = _bookLoanDao.GetAll();
+            var bookLoans = await _bookLoanDao.GetAllAsync();
 
-            if (bookLoans == null || !bookLoans.Any())
+            if (bookLoans == null)
             {
                 response.SetError("No se encontraron prestamos", System.Net.HttpStatusCode.NotFound);
                 return response;
             }
 
-            response.Data = (List<BookLoan>)bookLoans;
+            response.Data = bookLoans;
             return response;
         }
 
@@ -55,7 +55,7 @@ namespace ClassLibrary.Services
                 {
                     Book = new Book { Id = bookLoanDto.BookId },
                     User = new User { Id = bookLoanDto.UserId },
-                    LoanDate = (DateTime)bookLoanDto.LoanDate,
+                    LoanDate = (DateTimeOffset)bookLoanDto.LoanDate,
                     DueDate = bookLoanDto.LoanDate.Value.AddDays(5),
                     ReturnDate = null,
                     Status = "Entregado"
@@ -90,7 +90,7 @@ namespace ClassLibrary.Services
                 // Validar fecha de préstamo
                 if (bookReturnDto.ReturnDate == null)
                 {
-                    bookReturnDto.ReturnDate = DateTime.Now;
+                    bookReturnDto.ReturnDate = DateTimeOffset.Now;
                 }
 
                 // obtengo el prestamo

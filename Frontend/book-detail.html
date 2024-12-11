@@ -45,20 +45,15 @@
         </nav>
 
 
-        <hr>
-        <div class="row"><h2 class="p-3 mb-3">Listado de libros</h2></div>
-
-        <table class="table">
-            <thead>
-                <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Titulo</th>
-                <th scope="col">Autor</th>
-                </tr>
-            </thead>
-            <tbody id="tBody">
-            </tbody>
-        </table>
+        <div class="card mt-4" style="width: 18rem;">
+            <div class="card-body">
+                <h5 id="cardTitle" class="card-title">Card title</h5>
+                <h6 id="cardAuthor" class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                <p class="card-text"></p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
     </div>
     
 
@@ -78,8 +73,18 @@
             const msg = document.getElementById("userHeader");
             msg.textContent = `Bienvenido, ${user.name}`;
 
+            const id = getIdFromUrl();
+
+            getBook(id);
+
             getBooks();
         });
+
+        function getIdFromUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get('id');
+            return id;
+        }
 
         function logout() {
             localStorage.clear();
@@ -101,41 +106,24 @@
             .then(response => response.json())
             .then(data => {
                 console.log("data: ", data)
-                books = data.data;
-
-                cargarTabla(books);
-                
-
+                books = data.data; 
             });
-
         }
-
-
-        function cargarTabla(books) {
-            const tbody = document.getElementById("tBody");
-            tbody.innerHTML = "";
-    
-            books.forEach(book => {
-                // Crear una nueva fila
-                const row = document.createElement("tr");
-    
-                // Crear las celdas
-                const idCell = document.createElement("td");
-                idCell.textContent = book.id;
-                
-                const titleCell = document.createElement("td");
-                titleCell.textContent = book.title;
-    
-                const authorCell = document.createElement("td");
-                authorCell.textContent = book.author;
-    
-                // Agregar celdas a la fila
-                row.appendChild(idCell);
-                row.appendChild(titleCell);
-                row.appendChild(authorCell);
-    
-                // Agregar la fila al cuerpo de la tabla
-                tbody.appendChild(row);
+        function getBook(id) {
+            let book;
+            
+            fetch("https://localhost:7176/books/" + id, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': "application/json"
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("data: ", data)
+                book = data.data;
+                document.getElementById("cardTitle").textContent = book.title;
+                document.getElementById("cardAuthor").textContent = book.author;
             });
         }
         
